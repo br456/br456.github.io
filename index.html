@@ -19,7 +19,8 @@
   <body>
     <header>
       <div class="inner">
-        <h1>Wiki</h1>
+        <h1>GemManager Wiki</h1>
+		<h2>Version 1.7</h2>
         <h2></h2>
         <a href="http://dev.bukkit.org/bukkit-plugins/gemmanager/" class="button"><small>Download the plugin on </small>BukkitDev</a>
       </div>
@@ -28,14 +29,108 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-          <p>true</p>
+		
+          <p>GemManager is a Bukkit economy plugin created by br456. This wiki will tell you what the plugin does and how to use
+		  the plugin.</p>
+		  <!--Installation-->
+		  <h2>Installation</h2>
+		  <ol>
+		  <li>Download the plugin off of the Bukkit Dev site(Link in the top-right corner)</li>
+		  <li>Stop the server</li>
+		  <li>Drag the plugin into your server "plugins" folder</li>
+		  <li>Configure the plugin</li>
+		  <li>Start the server</li>
+		  </ol>
+		  
+		  
+		  <!--Configuration-->
+		  <h2>Configuration</h2>
+		  <p>
+	       When GemManager starts for the first time, it will generate a folder called "GemManager". Inside of the folder are 4 files:
+		   config.yml, data.yml, lang.yml, and uuids.yml. They each store different data that is used in the plugin.
+		  </p>
+		  
+		  <!--config.yml-->
+		  <h4>config.yml</h4>
+		  <p>
+		  In this file there are many options to change how the plugin works. To change the options, first open the file. Then you must
+		  change the value next the the options name. For example, if I want to disable scoreboard, I would change "Scoreboard: true" to 
+		  "Scoreboard: false".
+		  </p>
+		  
+		  <!--data.yml-->
+		  <h4>data.yml</h4>
+		  <p>
+		  This file stores every players name and balance. If MySQL is enabled, nothing will be stored in here, instead, it will saved in
+		  the MySQL database
+		  </p>
+		  
+		  <!--lang.yml-->
+		  <h4>lang.yml</h4>
+		  <p>
+		  This file contains all of the configurable messages. It also contains the name of emeralds, if custom emeralds are enabled.
+		  You can change values the same way you change values in the configuration file.
+		  </p>
+		  
+		  <!--uuids.yml-->
+		  <h4>uuids.yml</h4>
+		  <p>
+		  The uuids.yml file saves the players name and UUID. Saving the UUID allows gems to convert when a player changes names. When a
+		  player first joins the server, they are added to the file. If you notice a delay when you first join the server, it is
+		  because the server is retrieving the players UUID.
+		  </p>
+		  
+		  
+		  <!--Commands & Permissions-->
+		  <h2>Commands & Permissions</h2>
+		  <p>
+	       There are many commands in GemManager, but there is one permission for all of them. Here is a list and description of each
+		   command(/gem will show your balance if you don't have the permission gem.admin.command):
+		  </p>
+		  
+		  <table style="width:700px">
+			<tr>
+				<th>Command</th>
+				<th>Description</th> 
+				<th>Permission</th>
+			</tr>
+			<tr>
+				<td>/gem</td>
+				<td>Lists all commands and your balance</td> 
+				<td>gem.admin.command</td>
+			</tr>
+			<tr>
+				<td>/gem add {amnt} {player}</td>
+				<td>Adds gems to a players balance</td> 
+				<td>gem.admin.command</td>
+			</tr>
+			<tr>
+				<td>/gem sub {amnt} {player}</td>
+				<td>Removes gems from a players balance</td> 
+				<td>gem.admin.command</td>
+			</tr>			
+			<tr>
+				<td>/gem set {amnt} {player}</td>
+				<td>Sets a players balance</td> 
+				<td>gem.admin.command</td>
+			</tr>
+			<tr>
+				<td>/gem reset {player}</td>
+				<td>Resets a players balance to 0</td> 
+				<td>gem.admin.command</td>
+			</tr>
+		  </table>
+		  
         </section>
 
         <aside id="sidebar">
 
-          <p><b>Wiki Pages</b></p>
+          <p><b>Wiki Sections</b></p>
           <ul>
           <li><b><a href="/api">Developer API</a></b></li>
+		  <li><a href="/changelog">Changelog</a></li>
+		  <li><a href="/customization">Customization</a></li>
+		  <li><a href="/errors">Error Codes</a></li>
           </ul>
         </aside>
       </div>
